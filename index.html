@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubik's Cube Solver</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Rubik's Cube Solver</h1>
+        
+        <div class="status" id="status">Ready to solve!</div>
+        
+        <div class="controls">
+            <button onclick="generateScrambledCube()">Generate Scrambled Cube</button>
+            <button onclick="solveCube()" id="solveBtn" disabled>Solve Cube</button>
+            <button onclick="resetCube()">Reset to Solved</button>
+            <button onclick="showManualControls()" id="manualBtn">Toggle Manual Controls</button>
+        </div>
+
+        <div class="manual-controls" id="manualControls" style="display: none;">
+            <button onclick="cube.rotateF()">F</button>
+            <button onclick="cube.rotateFPrime()">F'</button>
+            <button onclick="cube.rotateR()">R</button>
+            <button onclick="cube.rotateRPrime()">R'</button>
+            <button onclick="cube.rotateU()">U</button>
+            <button onclick="cube.rotateUPrime()">U'</button>
+            <button onclick="cube.rotateL()">L</button>
+            <button onclick="cube.rotateLPrime()">L'</button>
+            <button onclick="cube.rotateD()">D</button>
+            <button onclick="cube.rotateDPrime()">D'</button>
+            <button onclick="cube.rotateB()">B</button>
+            <button onclick="cube.rotateBPrime()">B'</button>
+        </div>
+        
+        <div class="cube-display" id="cubeDisplay"></div>
+        
+        <div class="solution-steps" id="solutionSteps" style="display: none;">
+            <h3>Solution Steps:</h3>
+            <div id="stepsList"></div>
+        </div>
+    </div>
+
+</body>
+</html>
